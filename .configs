@@ -1,0 +1,26 @@
+#!/usr/bin/env bash
+
+# zsh plugins settings
+# * zsh-syntax-highlighting 
+(( ${+ZSH_HIGHLIGHT_STYLES} )) || typeset -A ZSH_HIGHLIGHT_STYLES
+ZSH_HIGHLIGHT_STYLES[path]=none
+ZSH_HIGHLIGHT_STYLES[path_prefix]=none
+ZSH_HIGHLIGHT_STYLES[precommand]='fg=green,underline=none'
+
+# zsh themes settings
+# * geometry
+GEOMETRY_PROMPT=(geometry_echo geometry_status geometry_path geometry_git geometry_hg geometry_echo) # redefine left prompt
+GEOMETRY_RPROMPT=(geometry_exec_time)      # append exec_time and pwd right prompt
+
+# Change cursor shape for different vi modes.
+function zle-keymap-select {
+  if [[ $KEYMAP == vicmd ]] || [[ $1 = 'block' ]]; then
+    echo -ne '\e[1 q'
+  elif [[ $KEYMAP == main ]] || [[ $KEYMAP == viins ]] || [[ $KEYMAP = '' ]] || [[ $1 = 'beam' ]]; then
+    echo -ne '\e[5 q'
+  fi
+}
+zle -N zle-keymap-select
+ 
+# Start with beam shape cursor on zsh startup and after every command.
+zle-line-init() { zle-keymap-select 'beam'}
