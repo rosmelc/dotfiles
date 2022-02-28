@@ -2,7 +2,7 @@
 
 # Load the shell dotfiles, and then some:
 
-for file in ~/.{exports,aliases,functions,configs}; do
+for file in ~/.dotfiles/.{exports,aliases,functions,configs,path}; do
 	[ -r "$file" ] && [ -f "$file" ] && source "$file";
 done;
 unset file;
@@ -15,6 +15,7 @@ ZSH_THEME="geometry"
 
 plugins=(
 	git
+	sudo
 	zsh-autosuggestions
 	zsh-syntax-highlighting
 )
@@ -22,3 +23,4 @@ plugins=(
 # Load Oh My Zsh 
 
 source $ZSH/oh-my-zsh.sh
+source $HOME/.cargo/env
