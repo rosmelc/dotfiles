@@ -1,8 +1,8 @@
-#                -- My zsh configuration --
+# My zsh configuration
 
 # Load the shell dotfiles, and then some:
 
-for file in ~/.dotfiles/.{exports,aliases,functions,configs,path}; do
+for file in ~/.dotfiles/{exports,aliases,functions,configs,path}; do
 	[ -r "$file" ] && [ -f "$file" ] && source "$file";
 done;
 unset file;
