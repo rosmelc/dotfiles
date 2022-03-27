@@ -14,4 +14,4 @@ export HISTSIZE='32768';
 # Prefer US English and use UTF-8.
 export LANG='en_US.UTF-8';
 
-export JAVA_HOME="/usr/lib/jvm/jdk-17.0.2"
+export JAVA_HOME="/usr/lib/jvm/jdk-18"

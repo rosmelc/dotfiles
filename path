@@ -4,6 +4,3 @@
 if which ruby >/dev/null && which gem >/dev/null; then
 	PATH="$PATH:$(ruby -r rubygems -e 'puts Gem.user_dir')/bin"
 fi
-
-# add java jdk to PATH
-PATH="$PATH:/usr/lib/jvm/jdk-17.0.2/bin"
