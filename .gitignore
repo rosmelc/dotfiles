@@ -1,2 +1,5 @@
 # oh my zsh files
 oh-my-zsh/
+
+# environment (custom)
+shellenv

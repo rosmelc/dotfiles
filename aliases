@@ -1,22 +1,11 @@
 #!/usr/bin/env bash
 
-# Easier navigation: .., ..., ...., ....., ~ and -
-alias ..="cd .."
-alias ...="cd ../.."
-alias ....="cd ../../.."
-alias .....="cd ../../../.."
-alias ~="cd ~" # `cd` is probably faster to type though
-alias -- -="cd -"
-# 
-alias lc="colorls"
-alias tree="colorls --tree"
-#
-alias docker="sudo docker"
-# Shortcuts
-alias dc="cd ~/Documents"
-alias dl="cd ~/Downloads"
-alias dt="cd ~/Desktop"
-alias p="cd ~/projects"
+# colorls 
+alias lc='colorls'
+alias tree='colorls --tree'
+
+# docker
+alias docker='sudo docker'
 
 # Always enable colored `grep` output
 # Note: `GREP_OPTIONS="--color=auto"` is deprecated, hence the alias usage.
@@ -28,4 +17,4 @@ alias egrep='egrep --color=auto'
 alias reload="exec ${SHELL} -l"
 
 # Print each PATH entry on a separate line
-alias path='echo -e ${PATH//:/\\n}'S
+alias path='echo -e ${PATH//:/\\n}'

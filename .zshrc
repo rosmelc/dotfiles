@@ -1,18 +1,17 @@
-# My zsh configuration
+# ******************** #
+# My zsh configuration #
+# ******************** #
 
-# Load the shell dotfiles, and then some:
-
-for file in ~/.dotfiles/{exports,aliases,functions,configs,path}; do
-	[ -r "$file" ] && [ -f "$file" ] && source "$file";
+# Load configuration files from dotfiles
+for file in ~/.dotfiles/{exports,aliases,functions,configs,shellenv}; do 
+  [ -r "$file" ] && [ -f "$file" ] && source "$file";
 done;
 unset file;
 
 # Set name of the theme to load 
-
 ZSH_THEME="geometry"
 
 # Add plugins to upload
-
 plugins=(
 	git
 	sudo
@@ -20,7 +19,5 @@ plugins=(
 	zsh-syntax-highlighting
 )
 
-# Load Oh My Zsh 
-
+# Load oh my zsh 
 source $ZSH/oh-my-zsh.sh
-source $HOME/.cargo/env

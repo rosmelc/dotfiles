@@ -1,17 +1,15 @@
 #!/usr/bin/env bash
 
 # Path to your oh-my-zsh installation. 
-export ZSH="$HOME/.dotfiles/oh-my-zsh"
+export ZSH="$HOME/.dotfiles/oh-\my-\zsh"
 
 export TERM=xterm-256color
 
 # Make vim the default editor.
-export EDITOR='nvim';
+export EDITOR=nvim
 
 # Increase Zsh history size.
-export HISTSIZE='32768';
+export HISTSIZE=50000
 
 # Prefer US English and use UTF-8.
-export LANG='en_US.UTF-8';
-
-export JAVA_HOME="/usr/lib/jvm/jdk-18"
+export LANG=en_US.UTF-8
