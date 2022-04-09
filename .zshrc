@@ -3,7 +3,7 @@
 # ******************** #
 
 # Load configuration files from dotfiles
-for file in ~/.dotfiles/{exports,aliases,functions,configs,shellenv}; do 
+for file in ~/.dotfiles/{variables,aliases,functions,configs,shellenv}; do 
   [ -r "$file" ] && [ -f "$file" ] && source "$file";
 done;
 unset file;
