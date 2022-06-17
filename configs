@@ -3,22 +3,8 @@
 # zsh plugins settings
 
 # zsh-syntax-highlighting 
-(( ${+ZSH_HIGHLIGHT_STYLES} )) || typeset -A ZSH_HIGHLIGHT_STYLES
+typeset -A ZSH_HIGHLIGHT_STYLES
 ZSH_HIGHLIGHT_STYLES[path]=none
 ZSH_HIGHLIGHT_STYLES[path_prefix]=none
 ZSH_HIGHLIGHT_STYLES[precommand]='fg=green,underline=none'
 ZSH_HIGHLIGHT_STYLES[autodirectory]='underline=none'
-
-# zsh themes settings
-
-# geometry
-GEOMETRY_STATUS_SYMBOL='􀛤 '
-GEOMETRY_STATUS_SYMBOL_ERROR='􀑌 ' 
-GEOMETRY_GIT_SYMBOL_DIRTY=' '
-GEOMETRY_GIT_SYMBOL_CLEAN=' '
-GEOMETRY_GIT_SYMBOL_REBASE=''
-GEOMETRY_GIT_SYMBOL_CONFLICTS_SOLVED='􀟉 '
-GEOMETRY_GIT_SYMBOL_CONFLICTS_UNSOLVED='􀟈 '
-
-GEOMETRY_PROMPT=(geometry_echo geometry_status geometry_path geometry_git geometry_hg geometry_echo)
-GEOMETRY_RPROMPT=(geometry_exec_time)

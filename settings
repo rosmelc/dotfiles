@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+# Settings
+source $HOME/.dotfiles/tools
+source $HOME/.dotfiles/aliases
+source $HOME/.dotfiles/configs
+source $HOME/.dotfiles/variables
+# custom
+source $HOME/.dotfiles/shellenv
